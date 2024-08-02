@@ -211,7 +211,7 @@ private:
         m_ZipPath = "";
         // close all files
         for (auto& file : m_FileList) {
-            file->Close();
+            file.second->Close();;
         }
         m_FileList.clear();
 
