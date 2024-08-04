@@ -275,7 +275,7 @@ private:
 
         IFilePtr file = FindFile(filePath, m_FileList);
         bool isExists = (file != nullptr);
-        if (!isExists && !IsReadOnlyST()) {
+        if (!isExists && (!IsReadOnlyST() && requestWrite)) {
             mode = mode | IFile::FileMode::Truncate;
             file.reset(new NativeFile(filePath));
         }
