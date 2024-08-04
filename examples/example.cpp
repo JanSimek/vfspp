@@ -4,7 +4,7 @@ using namespace vfspp;
 
 int main()
 {
-	VirtualFileSystemPtr vfs(new VirtualFileSystem());
+    VirtualFileSystemPtr vfs(new VirtualFileSystem());
     IFileSystemPtr rootFS(new NativeFileSystem("./files"));
     IFileSystemPtr memFS(new MemoryFileSystem());
     IFileSystemPtr zipFS(new ZipFileSystem("./test.zip"));
