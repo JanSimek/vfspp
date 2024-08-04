@@ -4,11 +4,13 @@ on:
   push:
     paths:
       - "CMakeLists.txt"
-      - "src/**"
+      - "include/**"
+      - "examples/**"
   pull_request:
     paths:
       - "CMakeLists.txt"
-      - "src/**"
+      - "include/**"
+      - "examples/**"
 
 jobs:
   build:
